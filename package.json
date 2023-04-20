@@ -1,0 +1,78 @@
+{
+  "version": "4.0.0",
+  "name": "@wffzy/nekoboi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wffzy/nekoboi.git"
+  },
+  "description": "Simple command handler",
+  "unpkg": "dist/index.min.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "types": "types/src/index.d.ts",
+  "license": "MIT",
+  "author": "Ditzzy <hello@zyy.sh> (https://boi.neko.pe)",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "test": "uvu -r ts-node/register test",
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix"
+  },
+  "keywords": [
+    "Nekopoi",
+    "Nekopoi Wrapper",
+    "nekoWrap",
+    "Nekopoi Scrapper"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "8.1.0",
+    "@types/chalk": "^2.2.0",
+    "@types/colors": "^1.2.1",
+    "@types/estree": "^0.0.50",
+    "@types/figlet": "^1.5.5",
+    "@types/qs": "^6.9.7",
+    "@types/set-cookie-parser": "^2.4.2",
+    "@types/spinnies": "^0.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-google": "^0.14.0",
+    "rollup": "2.21.0",
+    "rollup-plugin-terser": "6.1.0",
+    "rollup-plugin-typescript2": "0.27.1",
+    "ts-node": "8.10.2",
+    "typescript": "^4.7.4",
+    "uvu": "0.0.19"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^5.2.0",
+    "cheerio": "^1.0.0-rc.12",
+    "colors": "^1.4.0",
+    "figlet": "^1.6.0",
+    "puppeteer": "^15.3.0",
+    "puppeteer-extra": "^3.3.0",
+    "puppeteer-extra-plugin-stealth": "^2.10.1",
+    "set-cookie-parser": "^2.5.1",
+    "spinnies": "^0.5.1"
+  },
+  "bugs": {
+    "url": "https://github.com/wffzy/nekoboi/issues"
+  },
+  "homepage": "https://github.com/wffzy/nekoboi#readme",
+  "directories": {
+    "test": "test"
+  }
+}
